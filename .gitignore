@@ -104,3 +104,9 @@ venv/
 
 # Local Wan / diffusers GPU environment
 .venv-wan/
+data/
+g2pW/MONOPHONIC_CHARS.txt
+g2pW/POLYPHONIC_CHARS.txt
+g2pW/version
+remotion-composer/
+.gitignore
