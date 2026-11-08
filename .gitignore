@@ -104,9 +104,25 @@ venv/
 
 # Local Wan / diffusers GPU environment
 .venv-wan/
+# Runtime-generated local data and TTS model assets (not source)
 data/
 g2pW/MONOPHONIC_CHARS.txt
 g2pW/POLYPHONIC_CHARS.txt
 g2pW/version
-remotion-composer/
-.gitignore
+# NOTE: `remotion-composer/` is intentionally NOT ignored here — it holds
+# tracked composition source and fonts. Only build/dependency output is ignored
+# (see the `node_modules/` and `out/` rules above).
+# NOTE: `.gitignore` is intentionally NOT self-ignored — it is tracked and its
+# rules must stay shared across clones.
+
+# npm cache (NPM_CONFIG_CACHE — see .env), keeps npx/HyperFrames writes in-tree
+.npm-cache/
+
+# pytest scratch trees. These land in the repo root when the OS temp/profile
+# dirs are unwritable (see the NPM_CONFIG_CACHE note above), so `make test`
+# can leave pytest-of-<user>/ behind as untracked noise.
+pytest-of-*/
+
+
+# GFPGAN/facexlib download face-detection weights to ./gfpgan/weights at runtime
+gfpgan/
