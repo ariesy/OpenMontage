@@ -91,6 +91,8 @@ remotion-composer/public/*
 remotion-composer/public/demo-props/test-*
 remotion-composer/public/demo-props/talking-head-*
 remotion-composer/public/demo-props/caption-burn-*
+remotion-composer/public/demo-props/minimal-test.json
+remotion-composer/public/demo-props/subway-adventure.json
 
 venv/
 .venv/
